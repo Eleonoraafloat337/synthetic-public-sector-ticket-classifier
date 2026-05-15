@@ -14,3 +14,8 @@ This log captures repository intent and setup notes for future maintenance.
 ## 2026-05-15 Training Dependency Fix
 
 - Added `accelerate==1.6.0` because Hugging Face `Trainer` requires `accelerate>=0.26.0` with PyTorch.
+
+## 2026-05-15 Hugging Face Publishing
+
+- Target Hub repo: `https://huggingface.co/nprasann/synthetic-public-sector-ticket-classifier`.
+- GitHub README should point users to the published Hugging Face model and summarize the Hub model card.

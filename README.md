@@ -12,6 +12,10 @@
 
 All examples are synthetic. This repository must not contain real client data, case data, credentials, internal URLs, secrets, access tokens, logs, IP addresses, or regulated information.
 
+Published Hugging Face model:
+
+[nprasann/synthetic-public-sector-ticket-classifier](https://huggingface.co/nprasann/synthetic-public-sector-ticket-classifier)
+
 ## Repository Metadata
 
 Suggested GitHub description:
@@ -115,11 +119,24 @@ from transformers import pipeline
 
 classifier = pipeline(
     "text-classification",
-    model="YOUR_USERNAME/synthetic-public-sector-ticket-classifier"
+    model="nprasann/synthetic-public-sector-ticket-classifier"
 )
 
 print(classifier("I cannot access the policy document library."))
 ```
+
+## Hugging Face Model Card
+
+The Hub repository uses a generated model card with:
+
+- Model description for a small educational text classifier.
+- Intended use for synthetic public-sector helpdesk classification demos.
+- Out-of-scope use warnings for production routing, legal decisions, benefits decisions, security response, privacy determinations, and authoritative advice.
+- Training data notes stating that the examples are synthetic only.
+- Evaluation placeholder for held-out synthetic test results.
+- Limitations for small synthetic data, simplified labels, overconfidence risk, and unknown real-world performance.
+- Safety notes requiring review before public publishing.
+- MIT license and example `transformers.pipeline` usage.
 
 ## Repository Contents
 
