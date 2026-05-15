@@ -10,3 +10,7 @@ This log captures repository intent and setup notes for future maintenance.
 - GitHub owner target: `nprasann`.
 - GitHub description: `Synthetic public-sector helpdesk ticket classifier using Hugging Face Transformers and safe JSONL training data.`
 - GitHub topics: `huggingface`, `transformers`, `text-classification`, `synthetic-data`, `public-sector`, `helpdesk`, `machine-learning`, `python`, `pytorch`, `datasets`, `pytest`, `model-card`, `responsible-ai`.
+
+## 2026-05-15 Training Dependency Fix
+
+- Added `accelerate==1.6.0` because Hugging Face `Trainer` requires `accelerate>=0.26.0` with PyTorch.

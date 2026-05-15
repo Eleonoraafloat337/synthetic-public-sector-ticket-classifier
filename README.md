@@ -31,6 +31,7 @@ This repo is designed for Python 3.11+ and pins direct runtime/test dependencies
 | Python | `>=3.11` |
 | `torch` | `2.7.0` |
 | `transformers` | `4.51.3` |
+| `accelerate` | `1.6.0` |
 | `datasets` | `3.6.0` |
 | `evaluate` | `0.4.3` |
 | `scikit-learn` | `1.6.1` |
