@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synthetic-public-sector-ticket-classifier"
+version = "0.1.0"
+description = "Synthetic public-sector helpdesk ticket classifier using Hugging Face Transformers."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "synthetic-public-sector-ticket-classifier contributors"}]
+dependencies = [
+  "torch==2.7.0",
+  "transformers==4.51.3",
+  "datasets==3.6.0",
+  "evaluate==0.4.3",
+  "scikit-learn==1.6.1",
+  "numpy==2.2.5",
+  "huggingface-hub==0.31.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.0.3"]
+
+[project.scripts]
+ticket-classifier-validate = "ticket_classifier.data_validate:main"
+ticket-classifier-train = "ticket_classifier.train:main"
+ticket-classifier-evaluate = "ticket_classifier.evaluate_model:main"
+ticket-classifier-predict = "ticket_classifier.predict:main"
+ticket-classifier-publish = "ticket_classifier.publish_to_hub:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"

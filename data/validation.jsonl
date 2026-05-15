@@ -1,0 +1,18 @@
+{"text": "Can temporary staff request the same software catalog items as full-time staff?", "label": "policy_question"}
+{"text": "Where do I find the rules for storing draft policy documents?", "label": "policy_question"}
+{"text": "What is the policy for using agency laptops at a community workshop?", "label": "policy_question"}
+{"text": "The shared kiosk profile signs out immediately after authentication.", "label": "login_issue"}
+{"text": "I need help because the portal says my session cannot be verified.", "label": "login_issue"}
+{"text": "The user received account created notice but login still fails.", "label": "login_issue"}
+{"text": "The asset checkout tablet will not turn on after charging overnight.", "label": "incident_report"}
+{"text": "The helpdesk queue is not assigning new tickets to the rotation.", "label": "incident_report"}
+{"text": "The staff directory search returns no results for several common names.", "label": "incident_report"}
+{"text": "Can someone provide a demo of the service catalog request workflow?", "label": "training_request"}
+{"text": "Please add the procurement team to the collaboration tools training.", "label": "training_request"}
+{"text": "I need to complete the required data handling module before next week.", "label": "training_request"}
+{"text": "Please confirm whether staff can share a roster with an external training vendor.", "label": "data_privacy"}
+{"text": "A manager wants guidance on masking identifiers in a monthly report.", "label": "data_privacy"}
+{"text": "How do we limit access to a folder containing confidential draft responses?", "label": "data_privacy"}
+{"text": "Please add the legal review group to the draft policy folder.", "label": "document_access"}
+{"text": "I received a permission denied message when opening the agenda template.", "label": "document_access"}
+{"text": "The folder owner approved access but the document still will not open.", "label": "document_access"}

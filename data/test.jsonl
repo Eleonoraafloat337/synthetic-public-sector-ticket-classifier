@@ -1,0 +1,18 @@
+{"text": "Does the standard require annual review of distribution lists?", "label": "policy_question"}
+{"text": "Which guidance covers password reset identity verification questions?", "label": "policy_question"}
+{"text": "Can staff use a personal email address for a public webinar registration?", "label": "policy_question"}
+{"text": "My badge login is accepted but the desktop profile will not load.", "label": "login_issue"}
+{"text": "I cannot complete multifactor setup for the staff benefits site.", "label": "login_issue"}
+{"text": "After the weekend maintenance, my account no longer opens the service desk.", "label": "login_issue"}
+{"text": "The training lab projector shuts down after a few minutes of use.", "label": "incident_report"}
+{"text": "The public computer reservation station is not printing confirmation slips.", "label": "incident_report"}
+{"text": "The workflow approval button is missing for three reviewers.", "label": "incident_report"}
+{"text": "Can the helpdesk host a lunch session about password manager use?", "label": "training_request"}
+{"text": "Request training materials for staff who process public information requests.", "label": "training_request"}
+{"text": "Please register the field office for the mobile device care webinar.", "label": "training_request"}
+{"text": "Can the privacy office review a template before it goes live?", "label": "data_privacy"}
+{"text": "What steps should be taken when an attachment was sent to the wrong workgroup?", "label": "data_privacy"}
+{"text": "Please advise whether the analytics dashboard should show individual names.", "label": "data_privacy"}
+{"text": "Can temporary project staff view the public meeting packet drafts?", "label": "document_access"}
+{"text": "I need contributor access to update the standard operating procedure.", "label": "document_access"}
+{"text": "Please check why the library search result opens an access request page.", "label": "document_access"}

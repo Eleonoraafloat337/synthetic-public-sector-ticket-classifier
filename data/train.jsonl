@@ -1,0 +1,60 @@
+{"text": "Can you explain the retention policy for routine service request notes?", "label": "policy_question"}
+{"text": "Where can staff find the approved guidance for remote work equipment requests?", "label": "policy_question"}
+{"text": "Does the updated acceptable use policy allow personal tablets during training?", "label": "policy_question"}
+{"text": "What is the process for asking a policy exception for a shared workstation?", "label": "policy_question"}
+{"text": "Which policy explains how long helpdesk survey responses are kept?", "label": "policy_question"}
+{"text": "Can a department manager approve after-hours access under the standard policy?", "label": "policy_question"}
+{"text": "Where is the policy for requesting assistive technology documented?", "label": "policy_question"}
+{"text": "What policy covers staff use of collaboration tools for public meetings?", "label": "policy_question"}
+{"text": "Is there guidance on naming shared folders for interdepartment projects?", "label": "policy_question"}
+{"text": "Which policy describes when a ticket should be escalated to a supervisor?", "label": "policy_question"}
+{"text": "I am locked out of the learning portal after several failed sign-in attempts.", "label": "login_issue"}
+{"text": "My single sign-on prompt keeps returning me to the login page.", "label": "login_issue"}
+{"text": "The new hire cannot sign in to the ticketing system this morning.", "label": "login_issue"}
+{"text": "I changed my password and now the staff dashboard says authentication failed.", "label": "login_issue"}
+{"text": "Multifactor approval is not reaching my enrolled mobile device.", "label": "login_issue"}
+{"text": "My temporary account works for email but not for the helpdesk portal.", "label": "login_issue"}
+{"text": "The supervisor account says disabled when trying to access the intranet landing page.", "label": "login_issue"}
+{"text": "I can open the laptop but cannot sign in to the records training site.", "label": "login_issue"}
+{"text": "The password reset link expired before I could complete setup.", "label": "login_issue"}
+{"text": "My account asks for an old verification method that I no longer use.", "label": "login_issue"}
+{"text": "The public meeting room display stopped working during a scheduled hearing.", "label": "incident_report"}
+{"text": "Several staff report that the payment intake page is unavailable from the office lobby.", "label": "incident_report"}
+{"text": "A printer in the permit counter area is producing blank pages for every request.", "label": "incident_report"}
+{"text": "The case lookup screen is timing out for multiple clerks this afternoon.", "label": "incident_report"}
+{"text": "The building reception kiosk froze while residents were checking in.", "label": "incident_report"}
+{"text": "The document scanner at the service desk is making grinding sounds and stopping jobs.", "label": "incident_report"}
+{"text": "A scheduled batch notification did not send to applicants today.", "label": "incident_report"}
+{"text": "The department shared calendar disappeared for multiple team members.", "label": "incident_report"}
+{"text": "Users report that the online appointment form shows an error after submission.", "label": "incident_report"}
+{"text": "The conference room microphone is not capturing audio for remote attendees.", "label": "incident_report"}
+{"text": "Please enroll the finance team in the annual cybersecurity awareness course.", "label": "training_request"}
+{"text": "A new supervisor needs training on approving equipment requests.", "label": "training_request"}
+{"text": "Can we schedule a refresher on using the document management workspace?", "label": "training_request"}
+{"text": "Please assign accessibility basics training to the communications group.", "label": "training_request"}
+{"text": "The grants unit needs a walkthrough of the new ticket submission process.", "label": "training_request"}
+{"text": "I need the onboarding course added for two seasonal employees.", "label": "training_request"}
+{"text": "Can the records team receive training on scanning and indexing documents?", "label": "training_request"}
+{"text": "Please create a training session for managers on self-service reporting.", "label": "training_request"}
+{"text": "Our office needs guidance on using the virtual meeting room controls.", "label": "training_request"}
+{"text": "Requesting enrollment in the privacy basics course for new interns.", "label": "training_request"}
+{"text": "What should I do if a resident says their contact details appear in the wrong account?", "label": "data_privacy"}
+{"text": "I need guidance on minimizing personal information in a spreadsheet before sharing.", "label": "data_privacy"}
+{"text": "Can the helpdesk confirm whether a form field should collect date of birth?", "label": "data_privacy"}
+{"text": "A staff member asked how to redact personal details before uploading a file.", "label": "data_privacy"}
+{"text": "Please advise on handling an email that may contain sensitive applicant information.", "label": "data_privacy"}
+{"text": "We need a privacy review before adding a new field to the intake form.", "label": "data_privacy"}
+{"text": "How should we respond if a user requests deletion of optional profile details?", "label": "data_privacy"}
+{"text": "Can someone review whether the survey export includes unnecessary personal data?", "label": "data_privacy"}
+{"text": "I need help classifying a document that may include protected information.", "label": "data_privacy"}
+{"text": "What is the approved process for reporting accidental disclosure of a record?", "label": "data_privacy"}
+{"text": "User cannot access the policy document library from the staff portal.", "label": "document_access"}
+{"text": "Please grant read access to the budget planning folder for the analyst group.", "label": "document_access"}
+{"text": "I can see the records workspace but cannot open the procedure document.", "label": "document_access"}
+{"text": "The shared folder says access requested but no approver is listed.", "label": "document_access"}
+{"text": "A project coordinator needs permission to upload meeting minutes.", "label": "document_access"}
+{"text": "Please remove my access request because I selected the wrong document library.", "label": "document_access"}
+{"text": "I need access to the archived training materials for reference.", "label": "document_access"}
+{"text": "The document preview works but download is blocked for my role.", "label": "document_access"}
+{"text": "Can you restore access to a shared checklist after my department transfer?", "label": "document_access"}
+{"text": "The team lead cannot edit the onboarding guide in the workspace.", "label": "document_access"}
