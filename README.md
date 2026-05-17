@@ -1,158 +1,75 @@
-# synthetic-public-sector-ticket-classifier
+# Public Sector Ticket Classifier
 
-> A safe, synthetic, public-sector IT/helpdesk text-classification project using Hugging Face Transformers.
-
-![Python](https://img.shields.io/badge/python-3.11%2B-3776AB)
-![Transformers](https://img.shields.io/badge/Hugging%20Face-Transformers-FFD21E)
-![CLI first](https://img.shields.io/badge/workflow-CLI%20first-2E7D32)
-![Synthetic data only](https://img.shields.io/badge/data-synthetic%20only-6A1B9A)
-![Tests](https://img.shields.io/badge/tests-pytest-0A7EA4)
-
-`synthetic-public-sector-ticket-classifier` is an educational, CLI-first machine learning repository that trains a small sequence classifier for synthetic public-sector IT/helpdesk-style tickets.
-
-All examples are synthetic. This repository must not contain real client data, case data, credentials, internal URLs, secrets, access tokens, logs, IP addresses, or regulated information.
-
-Published Hugging Face model:
-
-[nprasann/synthetic-public-sector-ticket-classifier](https://huggingface.co/nprasann/synthetic-public-sector-ticket-classifier)
-
-## Repository Metadata
-
-Suggested GitHub description:
-
-> Synthetic public-sector helpdesk ticket classifier using Hugging Face Transformers and safe JSONL training data.
-
-Suggested GitHub topics:
-
-`huggingface`, `transformers`, `text-classification`, `synthetic-data`, `public-sector`, `helpdesk`, `machine-learning`, `python`, `pytorch`, `datasets`, `pytest`, `model-card`, `responsible-ai`
-
-## Software Versions
-
-This repo is designed for Python 3.11+ and pins direct runtime/test dependencies for repeatable local demos.
-
-| Component | Version |
-| --- | --- |
-| Python | `>=3.11` |
-| `torch` | `2.7.0` |
-| `transformers` | `4.51.3` |
-| `accelerate` | `1.6.0` |
-| `datasets` | `3.6.0` |
-| `evaluate` | `0.4.3` |
-| `scikit-learn` | `1.6.1` |
-| `numpy` | `2.2.5` |
-| `huggingface-hub` | `0.31.1` |
-| `pytest` | `9.0.3` |
-
-## Concepts
-
-A model is a learned function that maps inputs to outputs. In this project, the input is ticket text and the output is one of six labels: `policy_question`, `login_issue`, `incident_report`, `training_request`, `data_privacy`, or `document_access`.
-
-Training from scratch means learning a model from the beginning, usually with very large datasets and significant compute. Fine-tuning starts with an existing model and updates it on a smaller task-specific dataset. This project fine-tunes `distilbert-base-uncased` for educational text classification.
-
-Hugging Face Hub is a model-sharing platform. It can host trained models, tokenizers, model cards, and datasets. Publishing from this repo is deliberately opt-in and requires `--confirm-publish`.
+Production-ready FastAPI and training scaffold for routing synthetic government helpdesk tickets across 12 labels. The model path, thresholds, and secrets are environment driven so the same image can run locally or in Azure Container Apps.
 
 ## Quickstart
 
 ```bash
-python3.11 -m venv .venv
+python -m venv .venv
 source .venv/bin/activate
-pip install -e ".[dev]"
+python -m pip install -r requirements-dev.txt
+python tools/generate_dataset.py
+PYTHONPATH=src python -m ticket_classifier.data_validate data/train.jsonl
+PYTHONPATH=src uvicorn inference.app:app --app-dir src --host 0.0.0.0 --port 8080
 ```
 
-Validate the synthetic data:
+Train locally when GPU resources are available:
 
 ```bash
-python -m ticket_classifier.data_validate data/train.jsonl
-python -m ticket_classifier.data_validate data/validation.jsonl
-python -m ticket_classifier.data_validate data/test.jsonl
-```
-
-Train locally:
-
-```bash
-python -m ticket_classifier.train \
+PYTHONPATH=src python -m ticket_classifier.train \
   --train data/train.jsonl \
   --validation data/validation.jsonl \
+  --test data/test.jsonl \
   --output-dir output/model
 ```
 
-Evaluate:
+## Environment Variables
 
-```bash
-python -m ticket_classifier.evaluate_model \
-  --model-dir output/model \
-  --test data/test.jsonl
+| Variable | Purpose | Default |
+|---|---|---|
+| `MODEL_DIR` | Directory containing model artifacts and `label_map.json` | `output/model` |
+| `MODEL_VERSION` | Version returned by inference responses | `1.2.0` |
+| `BASE_MODEL` | Hugging Face base model for training | `microsoft/deberta-v3-small` |
+| `CONFIDENCE_THRESHOLD` | Below this score, return `uncertain` | `0.5` |
+| `LOW_CONFIDENCE_THRESHOLD` | Metrics threshold for low-confidence rate | `0.6` |
+| `DRIFT_WINDOW` | Number of recent predictions used for drift checks | `1000` |
+| `DRIFT_THRESHOLD` | Jensen-Shannon warning threshold | `0.1` |
+| `HUGGINGFACE_TOKEN` | Optional Hub token, sourced from Key Vault in Azure | unset |
+| `MLFLOW_TRACKING_URI` | MLflow tracking backend | local or workflow-provided |
+
+## Architecture
+
+```text
+Azure Container Apps <-> FastAPI inference service
+        |
+Azure Machine Learning <-> MLflow training and registry
+        |
+Azure Container Registry <-> Docker image
+        |
+Azure Monitor / App Insights <-> JSON logs and Prometheus metrics
+        |
+Azure Key Vault <-> HF token and runtime secrets
 ```
 
-Predict:
+## Production Checklist
+
+- [ ] Data validation passes for all JSONL splits.
+- [ ] `python -m ticket_classifier.train` produces `output/model/label_map.json`.
+- [ ] Macro F1 is at least 0.80 and no label F1 is below 0.65.
+- [ ] `python -m ticket_classifier.run_exam --model-dir output/model --output output/eval/scorecard.json` completes.
+- [ ] `ruff`, `mypy --strict`, and `pytest --cov=src --cov-fail-under=85` pass.
+- [ ] Docker image runs as non-root and responds at `/health` within 30 seconds.
+- [ ] Container App references Key Vault for secrets.
+- [ ] No raw ticket text appears in application logs.
+- [ ] Blue/green deployment health check passes before traffic promotion.
+
+## Publishing
+
+Hugging Face publication is guarded. The command refuses to publish unless `--confirm-publish` is present:
 
 ```bash
-python -m ticket_classifier.predict \
+PYTHONPATH=src python -m ticket_classifier.publish_to_hub \
   --model-dir output/model \
-  --text "User cannot access the policy document library."
-```
-
-Run tests:
-
-```bash
-pytest
-```
-
-## Publishing Safely
-
-Publishing is never the default. The command refuses to publish unless `--confirm-publish` is present.
-
-```bash
-python -m ticket_classifier.publish_to_hub \
-  --model-dir output/model \
-  --repo-id YOUR_USERNAME/synthetic-public-sector-ticket-classifier \
-  --private \
+  --repo-id nprasann/synthetic-public-sector-ticket-classifier \
   --confirm-publish
 ```
-
-Before public publishing, review the data, license, generated model card, model behavior, and repository visibility. Authentication requires either `HUGGINGFACE_TOKEN` or an existing `huggingface-cli login`.
-
-## Download And Use A Published Model
-
-```python
-from transformers import pipeline
-
-classifier = pipeline(
-    "text-classification",
-    model="nprasann/synthetic-public-sector-ticket-classifier"
-)
-
-print(classifier("I cannot access the policy document library."))
-```
-
-## Hugging Face Model Card
-
-The Hub repository uses a generated model card with:
-
-- Model description for a small educational text classifier.
-- Intended use for synthetic public-sector helpdesk classification demos.
-- Out-of-scope use warnings for production routing, legal decisions, benefits decisions, security response, privacy determinations, and authoritative advice.
-- Training data notes stating that the examples are synthetic only.
-- Evaluation placeholder for held-out synthetic test results.
-- Limitations for small synthetic data, simplified labels, overconfidence risk, and unknown real-world performance.
-- Safety notes requiring review before public publishing.
-- MIT license and example `transformers.pipeline` usage.
-
-## Repository Contents
-
-- `data/*.jsonl`: synthetic train, validation, and test splits.
-- `src/ticket_classifier/`: CLI modules for validation, training, evaluation, prediction, publishing, and model-card generation.
-- `docs/`: educational notes and safety guidance.
-- `tests/`: pytest coverage for validation, labels, and model-card generation.
-
-## Data Safety Checklist
-
-- Use only synthetic examples.
-- Do not include real client, resident, employee, agency, case, ticket, or incident data.
-- Do not include credentials, tokens, passwords, private keys, connection strings, internal URLs, logs, or IP addresses.
-- Run `python -m ticket_classifier.data_validate data/train.jsonl` before training.
-- Re-review data and model behavior before any public publishing.
-
-## License
-
-MIT

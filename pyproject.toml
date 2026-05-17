@@ -19,10 +19,25 @@ dependencies = [
   "scikit-learn==1.6.1",
   "numpy==2.2.5",
   "huggingface-hub==0.31.1",
+  "fastapi==0.115.12",
+  "uvicorn==0.34.2",
+  "pydantic==2.11.4",
+  "pydantic-settings==2.9.1",
+  "prometheus-client==0.21.1",
+  "mlflow==2.22.0",
+  "matplotlib==3.10.1",
+  "seaborn==0.13.2",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest==9.0.3"]
+dev = [
+  "pytest==9.0.3",
+  "pytest-cov==7.0.0",
+  "ruff==0.11.9",
+  "mypy==1.15.0",
+  "httpx==0.28.1",
+  "types-requests==2.32.0.20250515",
+]
 
 [project.scripts]
 ticket-classifier-validate = "ticket_classifier.data_validate:main"
@@ -30,6 +45,7 @@ ticket-classifier-train = "ticket_classifier.train:main"
 ticket-classifier-evaluate = "ticket_classifier.evaluate_model:main"
 ticket-classifier-predict = "ticket_classifier.predict:main"
 ticket-classifier-publish = "ticket_classifier.publish_to_hub:main"
+ticket-classifier-exam = "ticket_classifier.run_exam:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -38,3 +54,19 @@ where = ["src"]
 pythonpath = ["src"]
 testpaths = ["tests"]
 addopts = "-q"
+
+[tool.ticket_classifier]
+default_base_model = "microsoft/deberta-v3-small"
+
+[tool.ruff]
+line-length = 140
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "S"]
+ignore = ["S101"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+packages = ["ticket_classifier", "inference", "monitoring"]

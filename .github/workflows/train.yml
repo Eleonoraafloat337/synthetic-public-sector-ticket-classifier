@@ -1,0 +1,54 @@
+name: Train model
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "data/**"
+      - "src/ticket_classifier/**"
+      - ".github/workflows/train.yml"
+
+jobs:
+  train:
+    runs-on: self-hosted
+    env:
+      MLFLOW_TRACKING_URI: ${{ secrets.MLFLOW_TRACKING_URI }}
+      AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+      AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: python -m pip install -r requirements-dev.txt
+      - name: Validate data
+        run: |
+          python -m ticket_classifier.data_validate data/train.jsonl
+          python -m ticket_classifier.data_validate data/validation.jsonl
+          python -m ticket_classifier.data_validate data/test.jsonl
+      - name: Train
+        run: >
+          python -m ticket_classifier.train
+          --train data/train.jsonl
+          --validation data/validation.jsonl
+          --test data/test.jsonl
+          --output-dir output/model
+          --base-model microsoft/deberta-v3-small
+      - name: Run exam
+        run: python -m ticket_classifier.run_exam --model-dir output/model --output output/eval/scorecard.json
+      - name: Fail if macro F1 below 0.80
+        run: |
+          python - <<'PY'
+          import json
+          report = json.load(open("output/eval/classification_report.json", encoding="utf-8"))
+          f1 = report["macro avg"]["f1-score"]
+          raise SystemExit(0 if f1 >= 0.80 else f"macro F1 {f1:.3f} below 0.80")
+          PY
+      - name: Register model in Azure ML
+        run: >
+          az ml model create
+          --name public-sector-ticket-classifier
+          --path output/model
+          --type custom_model

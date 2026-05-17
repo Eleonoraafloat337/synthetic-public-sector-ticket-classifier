@@ -9,6 +9,12 @@ def test_label_mappings_are_stable_and_complete() -> None:
         "training_request",
         "data_privacy",
         "document_access",
+        "procurement_request",
+        "compliance_audit",
+        "identity_management",
+        "infrastructure_fault",
+        "grievance_hr",
+        "change_management",
     )
     assert set(LABEL_TO_ID) == set(LABELS)
     assert {ID_TO_LABEL[index] for index in ID_TO_LABEL} == set(LABELS)

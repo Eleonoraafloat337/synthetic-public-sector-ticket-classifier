@@ -14,7 +14,7 @@ from ticket_classifier.model_card import write_model_card
 
 def has_huggingface_auth() -> bool:
     """Return True when a token is available from env or huggingface-cli login."""
-    if os.getenv("HUGGINGFACE_TOKEN") or os.getenv("HF_TOKEN"):
+    if os.getenv("HUGGINGFACE_TOKEN"):
         return True
     return HfFolder.get_token() is not None
 

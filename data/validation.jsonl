@@ -1,18 +1,300 @@
-{"text": "Can temporary staff request the same software catalog items as full-time staff?", "label": "policy_question"}
-{"text": "Where do I find the rules for storing draft policy documents?", "label": "policy_question"}
-{"text": "What is the policy for using agency laptops at a community workshop?", "label": "policy_question"}
-{"text": "The shared kiosk profile signs out immediately after authentication.", "label": "login_issue"}
-{"text": "I need help because the portal says my session cannot be verified.", "label": "login_issue"}
-{"text": "The user received account created notice but login still fails.", "label": "login_issue"}
-{"text": "The asset checkout tablet will not turn on after charging overnight.", "label": "incident_report"}
-{"text": "The helpdesk queue is not assigning new tickets to the rotation.", "label": "incident_report"}
-{"text": "The staff directory search returns no results for several common names.", "label": "incident_report"}
-{"text": "Can someone provide a demo of the service catalog request workflow?", "label": "training_request"}
-{"text": "Please add the procurement team to the collaboration tools training.", "label": "training_request"}
-{"text": "I need to complete the required data handling module before next week.", "label": "training_request"}
-{"text": "Please confirm whether staff can share a roster with an external training vendor.", "label": "data_privacy"}
-{"text": "A manager wants guidance on masking identifiers in a monthly report.", "label": "data_privacy"}
-{"text": "How do we limit access to a folder containing confidential draft responses?", "label": "data_privacy"}
-{"text": "Please add the legal review group to the draft policy folder.", "label": "document_access"}
-{"text": "I received a permission denied message when opening the agenda template.", "label": "document_access"}
-{"text": "The folder owner approved access but the document still will not open.", "label": "document_access"}
+{"label": "identity_management", "text": "We have a question on offboarding after a staff member followed the usual process and got stuck. Ref validation-identity-management-013."}
+{"label": "infrastructure_fault", "text": "The branch has raised network latency; please route this to the responsible support group. Ref validation-infrastructure-fault-006."}
+{"label": "grievance_hr", "text": "For tomorrow's work queue, can the service desk check workplace complaint and tell us what is needed? Ref validation-grievance-hr-015."}
+{"label": "data_privacy", "text": "I need guidance about consent question. The request is not urgent but it is blocking my next step. Ref validation-data-privacy-011."}
+{"label": "infrastructure_fault", "text": "For tomorrow's work queue, can the service desk check VPN outage and tell us what is needed? Ref validation-infrastructure-fault-005."}
+{"label": "infrastructure_fault", "text": "Kindly assist, I am new in the office and printing queue is confusing for me. Ref validation-infrastructure-fault-014."}
+{"label": "data_privacy", "notes": "Mentions an incident, but primary concern is privacy handling.", "text": "The branch has raised consent question; please route this to the responsible support group. Ref validation-data-privacy-006. This may sound related to another queue, but the main need is consent question."}
+{"label": "document_access", "text": "I need guidance about briefing paper. The request is not urgent but it is blocking my next step. Ref validation-document-access-001."}
+{"label": "incident_report", "text": "The branch has raised lost access card; please route this to the responsible support group. Ref validation-incident-report-006."}
+{"label": "grievance_hr", "text": "We have a question on manager conduct after a staff member followed the usual process and got stuck. Ref validation-grievance-hr-013."}
+{"label": "compliance_audit", "text": "I need guidance about regulatory report. The request is not urgent but it is blocking my next step. Ref validation-compliance-audit-001."}
+{"label": "grievance_hr", "text": "Please help with workplace complaint; our team cannot complete the routine public service task today. Ref validation-grievance-hr-020."}
+{"label": "policy_question", "notes": "Mentions document access, but primary intent is asking which policy applies.", "text": "The branch has raised remote work; please route this to the responsible support group. Ref validation-policy-question-006. This may sound related to another queue, but the main need is remote work."}
+{"label": "change_management", "text": "We have a question on maintenance window after a staff member followed the usual process and got stuck. Ref validation-change-management-013."}
+{"label": "procurement_request", "text": "There is an issue involving hardware quote. It affects a low-risk administrative workflow. Ref validation-procurement-request-008."}
+{"label": "infrastructure_fault", "text": "We have a question on cloud resource after a staff member followed the usual process and got stuck. Ref validation-infrastructure-fault-003."}
+{"label": "procurement_request", "text": "Could someone review this vendor onboarding ticket and advise the correct path? Ref validation-procurement-request-012."}
+{"label": "training_request", "text": "Can this ticket be assigned for manager workshop? We only need standard support, not an exception. Ref validation-training-request-009."}
+{"label": "procurement_request", "notes": "Mentions policy, but primary intent is purchasing approval.", "text": "I may not explain perfect English, but need help for vendor onboarding so our form can move forward. Ref validation-procurement-request-007. This may sound related to another queue, but the main need is vendor onboarding."}
+{"label": "login_issue", "text": "I may not explain perfect English, but need help for single sign-on so our form can move forward. Ref validation-login-issue-017."}
+{"label": "change_management", "text": "I need guidance about release approval. The request is not urgent but it is blocking my next step. Ref validation-change-management-011."}
+{"label": "grievance_hr", "text": "We have a question on manager conduct after a staff member followed the usual process and got stuck. Ref validation-grievance-hr-023."}
+{"label": "training_request", "text": "Kindly assist, I am new in the office and manager workshop is confusing for me. Ref validation-training-request-004."}
+{"label": "identity_management", "notes": "Mentions login, but primary intent is role provisioning.", "text": "Kindly assist, I am new in the office and access group is confusing for me. Ref validation-identity-management-004. This may sound related to another queue, but the main need is access group."}
+{"label": "incident_report", "text": "Please help with minor safety incident; our team cannot complete the routine public service task today. Ref validation-incident-report-000."}
+{"label": "training_request", "text": "Please help with privacy refresher; our team cannot complete the routine public service task today. Ref validation-training-request-010."}
+{"label": "data_privacy", "text": "Could someone review this data deletion ticket and advise the correct path? Ref validation-data-privacy-022."}
+{"label": "training_request", "text": "For tomorrow's work queue, can the service desk check privacy refresher and tell us what is needed? Ref validation-training-request-005."}
+{"label": "infrastructure_fault", "text": "I need guidance about network latency. The request is not urgent but it is blocking my next step. Ref validation-infrastructure-fault-011."}
+{"label": "change_management", "text": "For tomorrow's work queue, can the service desk check CAB submission and tell us what is needed? Ref validation-change-management-015."}
+{"label": "procurement_request", "text": "The branch has raised laptop purchase; please route this to the responsible support group. Ref validation-procurement-request-016."}
+{"label": "infrastructure_fault", "text": "There is an issue involving cloud resource. It affects a low-risk administrative workflow. Ref validation-infrastructure-fault-008."}
+{"label": "identity_management", "text": "I may not explain perfect English, but need help for role provisioning so our form can move forward. Ref validation-identity-management-017."}
+{"label": "compliance_audit", "text": "The branch has raised regulatory report; please route this to the responsible support group. Ref validation-compliance-audit-006."}
+{"label": "compliance_audit", "text": "We have a question on Essential 8 after a staff member followed the usual process and got stuck. Ref validation-compliance-audit-013."}
+{"label": "change_management", "notes": "Mentions infrastructure, but primary intent is CAB approval.", "text": "Please help with CAB submission; our team cannot complete the routine public service task today. Ref validation-change-management-000. This may sound related to another queue, but the main need is CAB submission."}
+{"label": "identity_management", "text": "We have a question on offboarding after a staff member followed the usual process and got stuck. Ref validation-identity-management-023."}
+{"label": "procurement_request", "notes": "Mentions policy, but primary intent is purchasing approval.", "text": "For tomorrow's work queue, can the service desk check software license and tell us what is needed? Ref validation-procurement-request-005. This may sound related to another queue, but the main need is software license."}
+{"label": "infrastructure_fault", "text": "Can this ticket be assigned for printing queue? We only need standard support, not an exception. Ref validation-infrastructure-fault-009."}
+{"label": "data_privacy", "text": "Please help with personal information; our team cannot complete the routine public service task today. Ref validation-data-privacy-020."}
+{"label": "identity_management", "text": "Please help with MFA setup; our team cannot complete the routine public service task today. Ref validation-identity-management-010."}
+{"label": "grievance_hr", "text": "The branch has raised misconduct concern; please route this to the responsible support group. Ref validation-grievance-hr-016."}
+{"label": "data_privacy", "notes": "Mentions an incident, but primary concern is privacy handling.", "text": "Could someone review this data deletion ticket and advise the correct path? Ref validation-data-privacy-002. This may sound related to another queue, but the main need is data deletion."}
+{"label": "incident_report", "text": "We have a question on equipment damage after a staff member followed the usual process and got stuck. Ref validation-incident-report-023."}
+{"label": "incident_report", "text": "Please help with minor safety incident; our team cannot complete the routine public service task today. Ref validation-incident-report-020."}
+{"label": "login_issue", "notes": "Mentions MFA and identity, but the user is blocked at login.", "text": "For tomorrow's work queue, can the service desk check password reset and tell us what is needed? Ref validation-login-issue-005. This may sound related to another queue, but the main need is password reset."}
+{"label": "document_access", "text": "Kindly assist, I am new in the office and shared register is confusing for me. Ref validation-document-access-014."}
+{"label": "change_management", "notes": "Mentions infrastructure, but primary intent is CAB approval.", "text": "The branch has raised release approval; please route this to the responsible support group. Ref validation-change-management-006. This may sound related to another queue, but the main need is release approval."}
+{"label": "grievance_hr", "text": "There is an issue involving manager conduct. It affects a low-risk administrative workflow. Ref validation-grievance-hr-018."}
+{"label": "login_issue", "text": "We have a question on portal login after a staff member followed the usual process and got stuck. Ref validation-login-issue-023."}
+{"label": "login_issue", "notes": "Mentions MFA and identity, but the user is blocked at login.", "text": "We have a question on portal login after a staff member followed the usual process and got stuck. Ref validation-login-issue-003. This may sound related to another queue, but the main need is portal login."}
+{"label": "login_issue", "text": "The branch has raised locked account; please route this to the responsible support group. Ref validation-login-issue-016."}
+{"label": "training_request", "text": "Could someone review this induction ticket and advise the correct path? Ref validation-training-request-022."}
+{"label": "login_issue", "notes": "Mentions MFA and identity, but the user is blocked at login.", "text": "Please help with password reset; our team cannot complete the routine public service task today. Ref validation-login-issue-000. This may sound related to another queue, but the main need is password reset."}
+{"label": "data_privacy", "notes": "Mentions an incident, but primary concern is privacy handling.", "text": "I need guidance about consent question. The request is not urgent but it is blocking my next step. Ref validation-data-privacy-001. This may sound related to another queue, but the main need is consent question."}
+{"label": "incident_report", "text": "Can this ticket be assigned for visitor concern? We only need standard support, not an exception. Ref validation-incident-report-019."}
+{"label": "training_request", "text": "Kindly assist, I am new in the office and manager workshop is confusing for me. Ref validation-training-request-014."}
+{"label": "policy_question", "notes": "Mentions document access, but primary intent is asking which policy applies.", "text": "Kindly assist, I am new in the office and leave rules is confusing for me. Ref validation-policy-question-004. This may sound related to another queue, but the main need is leave rules."}
+{"label": "training_request", "text": "We have a question on security awareness after a staff member followed the usual process and got stuck. Ref validation-training-request-023."}
+{"label": "training_request", "text": "I need guidance about records course. The request is not urgent but it is blocking my next step. Ref validation-training-request-011."}
+{"label": "compliance_audit", "text": "I need guidance about regulatory report. The request is not urgent but it is blocking my next step. Ref validation-compliance-audit-021."}
+{"label": "data_privacy", "notes": "Mentions an incident, but primary concern is privacy handling.", "text": "For tomorrow's work queue, can the service desk check personal information and tell us what is needed? Ref validation-data-privacy-005. This may sound related to another queue, but the main need is personal information."}
+{"label": "infrastructure_fault", "text": "Please help with VPN outage; our team cannot complete the routine public service task today. Ref validation-infrastructure-fault-010."}
+{"label": "identity_management", "notes": "Mentions login, but primary intent is role provisioning.", "text": "I need guidance about service account. The request is not urgent but it is blocking my next step. Ref validation-identity-management-001. This may sound related to another queue, but the main need is service account."}
+{"label": "procurement_request", "text": "There is an issue involving hardware quote. It affects a low-risk administrative workflow. Ref validation-procurement-request-018."}
+{"label": "incident_report", "text": "Please help with minor safety incident; our team cannot complete the routine public service task today. Ref validation-incident-report-010."}
+{"label": "document_access", "text": "For tomorrow's work queue, can the service desk check case folder and tell us what is needed? Ref validation-document-access-005."}
+{"label": "infrastructure_fault", "text": "Kindly assist, I am new in the office and printing queue is confusing for me. Ref validation-infrastructure-fault-004."}
+{"label": "grievance_hr", "text": "The branch has raised misconduct concern; please route this to the responsible support group. Ref validation-grievance-hr-006."}
+{"label": "document_access", "text": "Could someone review this policy library ticket and advise the correct path? Ref validation-document-access-022."}
+{"label": "data_privacy", "text": "We have a question on breach concern after a staff member followed the usual process and got stuck. Ref validation-data-privacy-013."}
+{"label": "data_privacy", "notes": "Mentions an incident, but primary concern is privacy handling.", "text": "Please help with personal information; our team cannot complete the routine public service task today. Ref validation-data-privacy-000. This may sound related to another queue, but the main need is personal information."}
+{"label": "change_management", "notes": "Mentions infrastructure, but primary intent is CAB approval.", "text": "Could someone review this rollback plan ticket and advise the correct path? Ref validation-change-management-002. This may sound related to another queue, but the main need is rollback plan."}
+{"label": "compliance_audit", "text": "There is an issue involving Essential 8. It affects a low-risk administrative workflow. Ref validation-compliance-audit-008."}
+{"label": "incident_report", "text": "Kindly assist, I am new in the office and visitor concern is confusing for me. Ref validation-incident-report-024."}
+{"label": "procurement_request", "notes": "Mentions policy, but primary intent is purchasing approval.", "text": "Please help with software license; our team cannot complete the routine public service task today. Ref validation-procurement-request-000. This may sound related to another queue, but the main need is software license."}
+{"label": "login_issue", "text": "Can this ticket be assigned for authentication error? We only need standard support, not an exception. Ref validation-login-issue-019."}
+{"label": "policy_question", "notes": "Mentions document access, but primary intent is asking which policy applies.", "text": "We have a question on procurement policy after a staff member followed the usual process and got stuck. Ref validation-policy-question-003. This may sound related to another queue, but the main need is procurement policy."}
+{"label": "change_management", "text": "I may not explain perfect English, but need help for rollback plan so our form can move forward. Ref validation-change-management-017."}
+{"label": "policy_question", "text": "The branch has raised remote work; please route this to the responsible support group. Ref validation-policy-question-016."}
+{"label": "data_privacy", "text": "Kindly assist, I am new in the office and subject access is confusing for me. Ref validation-data-privacy-014."}
+{"label": "compliance_audit", "text": "Could someone review this control attestation ticket and advise the correct path? Ref validation-compliance-audit-022."}
+{"label": "identity_management", "text": "Could someone review this role provisioning ticket and advise the correct path? Ref validation-identity-management-022."}
+{"label": "infrastructure_fault", "text": "Can this ticket be assigned for printing queue? We only need standard support, not an exception. Ref validation-infrastructure-fault-019."}
+{"label": "document_access", "text": "I need guidance about briefing paper. The request is not urgent but it is blocking my next step. Ref validation-document-access-011."}
+{"label": "change_management", "text": "There is an issue involving maintenance window. It affects a low-risk administrative workflow. Ref validation-change-management-008."}
+{"label": "grievance_hr", "text": "I need guidance about misconduct concern. The request is not urgent but it is blocking my next step. Ref validation-grievance-hr-011."}
+{"label": "data_privacy", "text": "Kindly assist, I am new in the office and subject access is confusing for me. Ref validation-data-privacy-024."}
+{"label": "policy_question", "text": "Kindly assist, I am new in the office and leave rules is confusing for me. Ref validation-policy-question-024."}
+{"label": "grievance_hr", "text": "There is an issue involving manager conduct. It affects a low-risk administrative workflow. Ref validation-grievance-hr-008."}
+{"label": "grievance_hr", "text": "I may not explain perfect English, but need help for HR dispute so our form can move forward. Ref validation-grievance-hr-007."}
+{"label": "identity_management", "notes": "Mentions login, but primary intent is role provisioning.", "text": "The branch has raised service account; please route this to the responsible support group. Ref validation-identity-management-006. This may sound related to another queue, but the main need is service account."}
+{"label": "policy_question", "text": "Can this ticket be assigned for leave rules? We only need standard support, not an exception. Ref validation-policy-question-009."}
+{"label": "infrastructure_fault", "text": "Please help with VPN outage; our team cannot complete the routine public service task today. Ref validation-infrastructure-fault-020."}
+{"label": "compliance_audit", "text": "The branch has raised regulatory report; please route this to the responsible support group. Ref validation-compliance-audit-016."}
+{"label": "login_issue", "text": "Please help with password reset; our team cannot complete the routine public service task today. Ref validation-login-issue-020."}
+{"label": "training_request", "text": "We have a question on security awareness after a staff member followed the usual process and got stuck. Ref validation-training-request-013."}
+{"label": "change_management", "notes": "Mentions infrastructure, but primary intent is CAB approval.", "text": "I may not explain perfect English, but need help for rollback plan so our form can move forward. Ref validation-change-management-007. This may sound related to another queue, but the main need is rollback plan."}
+{"label": "policy_question", "text": "We have a question on procurement policy after a staff member followed the usual process and got stuck. Ref validation-policy-question-013."}
+{"label": "infrastructure_fault", "text": "We have a question on cloud resource after a staff member followed the usual process and got stuck. Ref validation-infrastructure-fault-023."}
+{"label": "document_access", "text": "We have a question on archived memo after a staff member followed the usual process and got stuck. Ref validation-document-access-023."}
+{"label": "document_access", "text": "The branch has raised briefing paper; please route this to the responsible support group. Ref validation-document-access-016."}
+{"label": "policy_question", "text": "Kindly assist, I am new in the office and leave rules is confusing for me. Ref validation-policy-question-014."}
+{"label": "document_access", "text": "Please help with case folder; our team cannot complete the routine public service task today. Ref validation-document-access-000."}
+{"label": "infrastructure_fault", "text": "The branch has raised network latency; please route this to the responsible support group. Ref validation-infrastructure-fault-016."}
+{"label": "incident_report", "text": "For tomorrow's work queue, can the service desk check minor safety incident and tell us what is needed? Ref validation-incident-report-015."}
+{"label": "login_issue", "text": "For tomorrow's work queue, can the service desk check password reset and tell us what is needed? Ref validation-login-issue-015."}
+{"label": "document_access", "text": "Kindly assist, I am new in the office and shared register is confusing for me. Ref validation-document-access-024."}
+{"label": "data_privacy", "notes": "Mentions an incident, but primary concern is privacy handling.", "text": "Kindly assist, I am new in the office and subject access is confusing for me. Ref validation-data-privacy-004. This may sound related to another queue, but the main need is subject access."}
+{"label": "policy_question", "text": "I need guidance about remote work. The request is not urgent but it is blocking my next step. Ref validation-policy-question-021."}
+{"label": "document_access", "text": "We have a question on archived memo after a staff member followed the usual process and got stuck. Ref validation-document-access-013."}
+{"label": "data_privacy", "notes": "Mentions an incident, but primary concern is privacy handling.", "text": "I may not explain perfect English, but need help for data deletion so our form can move forward. Ref validation-data-privacy-007. This may sound related to another queue, but the main need is data deletion."}
+{"label": "data_privacy", "text": "Can this ticket be assigned for subject access? We only need standard support, not an exception. Ref validation-data-privacy-019."}
+{"label": "data_privacy", "text": "There is an issue involving breach concern. It affects a low-risk administrative workflow. Ref validation-data-privacy-008."}
+{"label": "identity_management", "notes": "Mentions login, but primary intent is role provisioning.", "text": "For tomorrow's work queue, can the service desk check MFA setup and tell us what is needed? Ref validation-identity-management-005. This may sound related to another queue, but the main need is MFA setup."}
+{"label": "login_issue", "text": "I need guidance about locked account. The request is not urgent but it is blocking my next step. Ref validation-login-issue-011."}
+{"label": "grievance_hr", "text": "We have a question on manager conduct after a staff member followed the usual process and got stuck. Ref validation-grievance-hr-003."}
+{"label": "training_request", "text": "Could someone review this induction ticket and advise the correct path? Ref validation-training-request-002."}
+{"label": "identity_management", "text": "Kindly assist, I am new in the office and access group is confusing for me. Ref validation-identity-management-014."}
+{"label": "login_issue", "text": "There is an issue involving portal login. It affects a low-risk administrative workflow. Ref validation-login-issue-008."}
+{"label": "change_management", "text": "Kindly assist, I am new in the office and change freeze is confusing for me. Ref validation-change-management-024."}
+{"label": "training_request", "text": "For tomorrow's work queue, can the service desk check privacy refresher and tell us what is needed? Ref validation-training-request-015."}
+{"label": "policy_question", "text": "There is an issue involving procurement policy. It affects a low-risk administrative workflow. Ref validation-policy-question-008."}
+{"label": "data_privacy", "text": "Could someone review this data deletion ticket and advise the correct path? Ref validation-data-privacy-012."}
+{"label": "document_access", "text": "Could someone review this policy library ticket and advise the correct path? Ref validation-document-access-002."}
+{"label": "login_issue", "notes": "Mentions MFA and identity, but the user is blocked at login.", "text": "I need guidance about locked account. The request is not urgent but it is blocking my next step. Ref validation-login-issue-001. This may sound related to another queue, but the main need is locked account."}
+{"label": "grievance_hr", "text": "Please help with workplace complaint; our team cannot complete the routine public service task today. Ref validation-grievance-hr-010."}
+{"label": "document_access", "text": "There is an issue involving archived memo. It affects a low-risk administrative workflow. Ref validation-document-access-008."}
+{"label": "document_access", "text": "The branch has raised briefing paper; please route this to the responsible support group. Ref validation-document-access-006."}
+{"label": "infrastructure_fault", "text": "For tomorrow's work queue, can the service desk check VPN outage and tell us what is needed? Ref validation-infrastructure-fault-015."}
+{"label": "document_access", "text": "Kindly assist, I am new in the office and shared register is confusing for me. Ref validation-document-access-004."}
+{"label": "login_issue", "notes": "Mentions MFA and identity, but the user is blocked at login.", "text": "Kindly assist, I am new in the office and authentication error is confusing for me. Ref validation-login-issue-004. This may sound related to another queue, but the main need is authentication error."}
+{"label": "incident_report", "text": "There is an issue involving equipment damage. It affects a low-risk administrative workflow. Ref validation-incident-report-018."}
+{"label": "identity_management", "text": "For tomorrow's work queue, can the service desk check MFA setup and tell us what is needed? Ref validation-identity-management-015."}
+{"label": "compliance_audit", "text": "For tomorrow's work queue, can the service desk check audit evidence and tell us what is needed? Ref validation-compliance-audit-005."}
+{"label": "change_management", "notes": "Mentions infrastructure, but primary intent is CAB approval.", "text": "For tomorrow's work queue, can the service desk check CAB submission and tell us what is needed? Ref validation-change-management-005. This may sound related to another queue, but the main need is CAB submission."}
+{"label": "data_privacy", "text": "Please help with personal information; our team cannot complete the routine public service task today. Ref validation-data-privacy-010."}
+{"label": "procurement_request", "notes": "Mentions policy, but primary intent is purchasing approval.", "text": "I need guidance about laptop purchase. The request is not urgent but it is blocking my next step. Ref validation-procurement-request-001. This may sound related to another queue, but the main need is laptop purchase."}
+{"label": "document_access", "text": "I need guidance about briefing paper. The request is not urgent but it is blocking my next step. Ref validation-document-access-021."}
+{"label": "compliance_audit", "text": "We have a question on Essential 8 after a staff member followed the usual process and got stuck. Ref validation-compliance-audit-003."}
+{"label": "change_management", "text": "Can this ticket be assigned for change freeze? We only need standard support, not an exception. Ref validation-change-management-019."}
+{"label": "procurement_request", "notes": "Mentions policy, but primary intent is purchasing approval.", "text": "Kindly assist, I am new in the office and subscription renewal is confusing for me. Ref validation-procurement-request-004. This may sound related to another queue, but the main need is subscription renewal."}
+{"label": "policy_question", "text": "Could someone review this travel approval ticket and advise the correct path? Ref validation-policy-question-012."}
+{"label": "incident_report", "text": "I may not explain perfect English, but need help for near miss so our form can move forward. Ref validation-incident-report-007."}
+{"label": "change_management", "notes": "Mentions infrastructure, but primary intent is CAB approval.", "text": "I need guidance about release approval. The request is not urgent but it is blocking my next step. Ref validation-change-management-001. This may sound related to another queue, but the main need is release approval."}
+{"label": "procurement_request", "text": "Please help with software license; our team cannot complete the routine public service task today. Ref validation-procurement-request-020."}
+{"label": "procurement_request", "text": "Please help with software license; our team cannot complete the routine public service task today. Ref validation-procurement-request-010."}
+{"label": "change_management", "text": "Could someone review this rollback plan ticket and advise the correct path? Ref validation-change-management-012."}
+{"label": "infrastructure_fault", "text": "I need guidance about network latency. The request is not urgent but it is blocking my next step. Ref validation-infrastructure-fault-001."}
+{"label": "policy_question", "notes": "Mentions document access, but primary intent is asking which policy applies.", "text": "Could someone review this travel approval ticket and advise the correct path? Ref validation-policy-question-002. This may sound related to another queue, but the main need is travel approval."}
+{"label": "training_request", "text": "Please help with privacy refresher; our team cannot complete the routine public service task today. Ref validation-training-request-000."}
+{"label": "infrastructure_fault", "text": "Kindly assist, I am new in the office and printing queue is confusing for me. Ref validation-infrastructure-fault-024."}
+{"label": "training_request", "text": "I may not explain perfect English, but need help for induction so our form can move forward. Ref validation-training-request-017."}
+{"label": "change_management", "text": "Can this ticket be assigned for change freeze? We only need standard support, not an exception. Ref validation-change-management-009."}
+{"label": "training_request", "text": "There is an issue involving security awareness. It affects a low-risk administrative workflow. Ref validation-training-request-008."}
+{"label": "procurement_request", "text": "Kindly assist, I am new in the office and subscription renewal is confusing for me. Ref validation-procurement-request-024."}
+{"label": "incident_report", "text": "There is an issue involving equipment damage. It affects a low-risk administrative workflow. Ref validation-incident-report-008."}
+{"label": "procurement_request", "text": "We have a question on hardware quote after a staff member followed the usual process and got stuck. Ref validation-procurement-request-013."}
+{"label": "policy_question", "text": "We have a question on procurement policy after a staff member followed the usual process and got stuck. Ref validation-policy-question-023."}
+{"label": "policy_question", "text": "For tomorrow's work queue, can the service desk check records retention and tell us what is needed? Ref validation-policy-question-015."}
+{"label": "incident_report", "text": "The branch has raised lost access card; please route this to the responsible support group. Ref validation-incident-report-016."}
+{"label": "policy_question", "text": "Please help with records retention; our team cannot complete the routine public service task today. Ref validation-policy-question-020."}
+{"label": "change_management", "notes": "Mentions infrastructure, but primary intent is CAB approval.", "text": "Kindly assist, I am new in the office and change freeze is confusing for me. Ref validation-change-management-004. This may sound related to another queue, but the main need is change freeze."}
+{"label": "login_issue", "text": "Kindly assist, I am new in the office and authentication error is confusing for me. Ref validation-login-issue-024."}
+{"label": "incident_report", "text": "Kindly assist, I am new in the office and visitor concern is confusing for me. Ref validation-incident-report-014."}
+{"label": "change_management", "text": "Kindly assist, I am new in the office and change freeze is confusing for me. Ref validation-change-management-014."}
+{"label": "incident_report", "text": "We have a question on equipment damage after a staff member followed the usual process and got stuck. Ref validation-incident-report-003."}
+{"label": "procurement_request", "text": "For tomorrow's work queue, can the service desk check software license and tell us what is needed? Ref validation-procurement-request-015."}
+{"label": "training_request", "text": "I may not explain perfect English, but need help for induction so our form can move forward. Ref validation-training-request-007."}
+{"label": "incident_report", "text": "We have a question on equipment damage after a staff member followed the usual process and got stuck. Ref validation-incident-report-013."}
+{"label": "infrastructure_fault", "text": "We have a question on cloud resource after a staff member followed the usual process and got stuck. Ref validation-infrastructure-fault-013."}
+{"label": "procurement_request", "text": "We have a question on hardware quote after a staff member followed the usual process and got stuck. Ref validation-procurement-request-023."}
+{"label": "compliance_audit", "text": "Kindly assist, I am new in the office and FISMA checklist is confusing for me. Ref validation-compliance-audit-004."}
+{"label": "compliance_audit", "text": "I need guidance about regulatory report. The request is not urgent but it is blocking my next step. Ref validation-compliance-audit-011."}
+{"label": "infrastructure_fault", "text": "Could someone review this server degradation ticket and advise the correct path? Ref validation-infrastructure-fault-002."}
+{"label": "grievance_hr", "text": "Can this ticket be assigned for bullying report? We only need standard support, not an exception. Ref validation-grievance-hr-009."}
+{"label": "change_management", "text": "Please help with CAB submission; our team cannot complete the routine public service task today. Ref validation-change-management-020."}
+{"label": "data_privacy", "text": "I may not explain perfect English, but need help for data deletion so our form can move forward. Ref validation-data-privacy-017."}
+{"label": "training_request", "text": "I need guidance about records course. The request is not urgent but it is blocking my next step. Ref validation-training-request-001."}
+{"label": "identity_management", "text": "I need guidance about service account. The request is not urgent but it is blocking my next step. Ref validation-identity-management-021."}
+{"label": "compliance_audit", "text": "Can this ticket be assigned for FISMA checklist? We only need standard support, not an exception. Ref validation-compliance-audit-019."}
+{"label": "identity_management", "notes": "Mentions login, but primary intent is role provisioning.", "text": "Please help with MFA setup; our team cannot complete the routine public service task today. Ref validation-identity-management-000. This may sound related to another queue, but the main need is MFA setup."}
+{"label": "identity_management", "text": "Please help with MFA setup; our team cannot complete the routine public service task today. Ref validation-identity-management-020."}
+{"label": "training_request", "text": "I need guidance about records course. The request is not urgent but it is blocking my next step. Ref validation-training-request-021."}
+{"label": "procurement_request", "notes": "Mentions policy, but primary intent is purchasing approval.", "text": "The branch has raised laptop purchase; please route this to the responsible support group. Ref validation-procurement-request-006. This may sound related to another queue, but the main need is laptop purchase."}
+{"label": "change_management", "text": "We have a question on maintenance window after a staff member followed the usual process and got stuck. Ref validation-change-management-023."}
+{"label": "identity_management", "text": "Can this ticket be assigned for access group? We only need standard support, not an exception. Ref validation-identity-management-019."}
+{"label": "document_access", "text": "I may not explain perfect English, but need help for policy library so our form can move forward. Ref validation-document-access-007."}
+{"label": "infrastructure_fault", "text": "Could someone review this server degradation ticket and advise the correct path? Ref validation-infrastructure-fault-012."}
+{"label": "policy_question", "text": "I need guidance about remote work. The request is not urgent but it is blocking my next step. Ref validation-policy-question-011."}
+{"label": "data_privacy", "notes": "Mentions an incident, but primary concern is privacy handling.", "text": "We have a question on breach concern after a staff member followed the usual process and got stuck. Ref validation-data-privacy-003. This may sound related to another queue, but the main need is breach concern."}
+{"label": "grievance_hr", "text": "Can this ticket be assigned for bullying report? We only need standard support, not an exception. Ref validation-grievance-hr-019."}
+{"label": "grievance_hr", "text": "Kindly assist, I am new in the office and bullying report is confusing for me. Ref validation-grievance-hr-014."}
+{"label": "training_request", "text": "Please help with privacy refresher; our team cannot complete the routine public service task today. Ref validation-training-request-020."}
+{"label": "grievance_hr", "text": "I need guidance about misconduct concern. The request is not urgent but it is blocking my next step. Ref validation-grievance-hr-001."}
+{"label": "procurement_request", "text": "Can this ticket be assigned for subscription renewal? We only need standard support, not an exception. Ref validation-procurement-request-009."}
+{"label": "infrastructure_fault", "text": "I may not explain perfect English, but need help for server degradation so our form can move forward. Ref validation-infrastructure-fault-017."}
+{"label": "policy_question", "text": "Please help with records retention; our team cannot complete the routine public service task today. Ref validation-policy-question-010."}
+{"label": "login_issue", "text": "Could someone review this single sign-on ticket and advise the correct path? Ref validation-login-issue-012."}
+{"label": "procurement_request", "text": "Can this ticket be assigned for subscription renewal? We only need standard support, not an exception. Ref validation-procurement-request-019."}
+{"label": "change_management", "text": "Could someone review this rollback plan ticket and advise the correct path? Ref validation-change-management-022."}
+{"label": "policy_question", "text": "Can this ticket be assigned for leave rules? We only need standard support, not an exception. Ref validation-policy-question-019."}
+{"label": "infrastructure_fault", "text": "I may not explain perfect English, but need help for server degradation so our form can move forward. Ref validation-infrastructure-fault-007."}
+{"label": "procurement_request", "text": "I need guidance about laptop purchase. The request is not urgent but it is blocking my next step. Ref validation-procurement-request-021."}
+{"label": "change_management", "text": "I need guidance about release approval. The request is not urgent but it is blocking my next step. Ref validation-change-management-021."}
+{"label": "training_request", "text": "Kindly assist, I am new in the office and manager workshop is confusing for me. Ref validation-training-request-024."}
+{"label": "compliance_audit", "text": "I may not explain perfect English, but need help for control attestation so our form can move forward. Ref validation-compliance-audit-017."}
+{"label": "procurement_request", "text": "Could someone review this vendor onboarding ticket and advise the correct path? Ref validation-procurement-request-022."}
+{"label": "compliance_audit", "text": "Please help with audit evidence; our team cannot complete the routine public service task today. Ref validation-compliance-audit-000."}
+{"label": "document_access", "text": "Can this ticket be assigned for shared register? We only need standard support, not an exception. Ref validation-document-access-009."}
+{"label": "incident_report", "text": "I need guidance about lost access card. The request is not urgent but it is blocking my next step. Ref validation-incident-report-011."}
+{"label": "identity_management", "notes": "Mentions login, but primary intent is role provisioning.", "text": "I may not explain perfect English, but need help for role provisioning so our form can move forward. Ref validation-identity-management-007. This may sound related to another queue, but the main need is role provisioning."}
+{"label": "login_issue", "text": "Kindly assist, I am new in the office and authentication error is confusing for me. Ref validation-login-issue-014."}
+{"label": "procurement_request", "notes": "Mentions policy, but primary intent is purchasing approval.", "text": "Could someone review this vendor onboarding ticket and advise the correct path? Ref validation-procurement-request-002. This may sound related to another queue, but the main need is vendor onboarding."}
+{"label": "data_privacy", "text": "For tomorrow's work queue, can the service desk check personal information and tell us what is needed? Ref validation-data-privacy-015."}
+{"label": "document_access", "text": "Can this ticket be assigned for shared register? We only need standard support, not an exception. Ref validation-document-access-019."}
+{"label": "identity_management", "text": "Can this ticket be assigned for access group? We only need standard support, not an exception. Ref validation-identity-management-009."}
+{"label": "incident_report", "text": "Can this ticket be assigned for visitor concern? We only need standard support, not an exception. Ref validation-incident-report-009."}
+{"label": "grievance_hr", "text": "Could someone review this HR dispute ticket and advise the correct path? Ref validation-grievance-hr-022."}
+{"label": "grievance_hr", "text": "I need guidance about misconduct concern. The request is not urgent but it is blocking my next step. Ref validation-grievance-hr-021."}
+{"label": "document_access", "text": "We have a question on archived memo after a staff member followed the usual process and got stuck. Ref validation-document-access-003."}
+{"label": "login_issue", "text": "We have a question on portal login after a staff member followed the usual process and got stuck. Ref validation-login-issue-013."}
+{"label": "incident_report", "text": "Kindly assist, I am new in the office and visitor concern is confusing for me. Ref validation-incident-report-004."}
+{"label": "compliance_audit", "text": "Kindly assist, I am new in the office and FISMA checklist is confusing for me. Ref validation-compliance-audit-024."}
+{"label": "compliance_audit", "text": "I may not explain perfect English, but need help for control attestation so our form can move forward. Ref validation-compliance-audit-007."}
+{"label": "compliance_audit", "text": "For tomorrow's work queue, can the service desk check audit evidence and tell us what is needed? Ref validation-compliance-audit-015."}
+{"label": "infrastructure_fault", "text": "There is an issue involving cloud resource. It affects a low-risk administrative workflow. Ref validation-infrastructure-fault-018."}
+{"label": "grievance_hr", "text": "Kindly assist, I am new in the office and bullying report is confusing for me. Ref validation-grievance-hr-024."}
+{"label": "policy_question", "text": "There is an issue involving procurement policy. It affects a low-risk administrative workflow. Ref validation-policy-question-018."}
+{"label": "data_privacy", "text": "Can this ticket be assigned for subject access? We only need standard support, not an exception. Ref validation-data-privacy-009."}
+{"label": "document_access", "text": "Please help with case folder; our team cannot complete the routine public service task today. Ref validation-document-access-020."}
+{"label": "document_access", "text": "I may not explain perfect English, but need help for policy library so our form can move forward. Ref validation-document-access-017."}
+{"label": "grievance_hr", "text": "Could someone review this HR dispute ticket and advise the correct path? Ref validation-grievance-hr-002."}
+{"label": "training_request", "text": "We have a question on security awareness after a staff member followed the usual process and got stuck. Ref validation-training-request-003."}
+{"label": "incident_report", "text": "For tomorrow's work queue, can the service desk check minor safety incident and tell us what is needed? Ref validation-incident-report-005."}
+{"label": "grievance_hr", "text": "Kindly assist, I am new in the office and bullying report is confusing for me. Ref validation-grievance-hr-004."}
+{"label": "procurement_request", "text": "I need guidance about laptop purchase. The request is not urgent but it is blocking my next step. Ref validation-procurement-request-011."}
+{"label": "login_issue", "notes": "Mentions MFA and identity, but the user is blocked at login.", "text": "I may not explain perfect English, but need help for single sign-on so our form can move forward. Ref validation-login-issue-007. This may sound related to another queue, but the main need is single sign-on."}
+{"label": "policy_question", "text": "Could someone review this travel approval ticket and advise the correct path? Ref validation-policy-question-022."}
+{"label": "grievance_hr", "text": "I may not explain perfect English, but need help for HR dispute so our form can move forward. Ref validation-grievance-hr-017."}
+{"label": "compliance_audit", "text": "Please help with audit evidence; our team cannot complete the routine public service task today. Ref validation-compliance-audit-020."}
+{"label": "login_issue", "notes": "Mentions MFA and identity, but the user is blocked at login.", "text": "The branch has raised locked account; please route this to the responsible support group. Ref validation-login-issue-006. This may sound related to another queue, but the main need is locked account."}
+{"label": "compliance_audit", "text": "Please help with audit evidence; our team cannot complete the routine public service task today. Ref validation-compliance-audit-010."}
+{"label": "login_issue", "text": "There is an issue involving portal login. It affects a low-risk administrative workflow. Ref validation-login-issue-018."}
+{"label": "login_issue", "text": "Can this ticket be assigned for authentication error? We only need standard support, not an exception. Ref validation-login-issue-009."}
+{"label": "data_privacy", "text": "The branch has raised consent question; please route this to the responsible support group. Ref validation-data-privacy-016."}
+{"label": "data_privacy", "text": "We have a question on breach concern after a staff member followed the usual process and got stuck. Ref validation-data-privacy-023."}
+{"label": "document_access", "text": "Please help with case folder; our team cannot complete the routine public service task today. Ref validation-document-access-010."}
+{"label": "compliance_audit", "text": "Can this ticket be assigned for FISMA checklist? We only need standard support, not an exception. Ref validation-compliance-audit-009."}
+{"label": "procurement_request", "text": "I may not explain perfect English, but need help for vendor onboarding so our form can move forward. Ref validation-procurement-request-017."}
+{"label": "incident_report", "text": "Could someone review this near miss ticket and advise the correct path? Ref validation-incident-report-002."}
+{"label": "policy_question", "notes": "Mentions document access, but primary intent is asking which policy applies.", "text": "I need guidance about remote work. The request is not urgent but it is blocking my next step. Ref validation-policy-question-001. This may sound related to another queue, but the main need is remote work."}
+{"label": "incident_report", "text": "I need guidance about lost access card. The request is not urgent but it is blocking my next step. Ref validation-incident-report-001."}
+{"label": "policy_question", "notes": "Mentions document access, but primary intent is asking which policy applies.", "text": "I may not explain perfect English, but need help for travel approval so our form can move forward. Ref validation-policy-question-007. This may sound related to another queue, but the main need is travel approval."}
+{"label": "procurement_request", "notes": "Mentions policy, but primary intent is purchasing approval.", "text": "We have a question on hardware quote after a staff member followed the usual process and got stuck. Ref validation-procurement-request-003. This may sound related to another queue, but the main need is hardware quote."}
+{"label": "identity_management", "text": "There is an issue involving offboarding. It affects a low-risk administrative workflow. Ref validation-identity-management-018."}
+{"label": "identity_management", "text": "The branch has raised service account; please route this to the responsible support group. Ref validation-identity-management-016."}
+{"label": "training_request", "text": "Can this ticket be assigned for manager workshop? We only need standard support, not an exception. Ref validation-training-request-019."}
+{"label": "procurement_request", "text": "Kindly assist, I am new in the office and subscription renewal is confusing for me. Ref validation-procurement-request-014."}
+{"label": "login_issue", "text": "Could someone review this single sign-on ticket and advise the correct path? Ref validation-login-issue-022."}
+{"label": "document_access", "text": "There is an issue involving archived memo. It affects a low-risk administrative workflow. Ref validation-document-access-018."}
+{"label": "training_request", "text": "The branch has raised records course; please route this to the responsible support group. Ref validation-training-request-016."}
+{"label": "identity_management", "notes": "Mentions login, but primary intent is role provisioning.", "text": "We have a question on offboarding after a staff member followed the usual process and got stuck. Ref validation-identity-management-003. This may sound related to another queue, but the main need is offboarding."}
+{"label": "incident_report", "text": "Could someone review this near miss ticket and advise the correct path? Ref validation-incident-report-022."}
+{"label": "incident_report", "text": "I may not explain perfect English, but need help for near miss so our form can move forward. Ref validation-incident-report-017."}
+{"label": "compliance_audit", "text": "Could someone review this control attestation ticket and advise the correct path? Ref validation-compliance-audit-012."}
+{"label": "identity_management", "notes": "Mentions login, but primary intent is role provisioning.", "text": "Could someone review this role provisioning ticket and advise the correct path? Ref validation-identity-management-002. This may sound related to another queue, but the main need is role provisioning."}
+{"label": "login_issue", "text": "I need guidance about locked account. The request is not urgent but it is blocking my next step. Ref validation-login-issue-021."}
+{"label": "compliance_audit", "text": "There is an issue involving Essential 8. It affects a low-risk administrative workflow. Ref validation-compliance-audit-018."}
+{"label": "change_management", "text": "Please help with CAB submission; our team cannot complete the routine public service task today. Ref validation-change-management-010."}
+{"label": "incident_report", "text": "Could someone review this near miss ticket and advise the correct path? Ref validation-incident-report-012."}
+{"label": "identity_management", "text": "Could someone review this role provisioning ticket and advise the correct path? Ref validation-identity-management-012."}
+{"label": "grievance_hr", "text": "For tomorrow's work queue, can the service desk check workplace complaint and tell us what is needed? Ref validation-grievance-hr-005."}
+{"label": "grievance_hr", "text": "Please help with workplace complaint; our team cannot complete the routine public service task today. Ref validation-grievance-hr-000."}
+{"label": "document_access", "text": "For tomorrow's work queue, can the service desk check case folder and tell us what is needed? Ref validation-document-access-015."}
+{"label": "data_privacy", "text": "There is an issue involving breach concern. It affects a low-risk administrative workflow. Ref validation-data-privacy-018."}
+{"label": "infrastructure_fault", "text": "I need guidance about network latency. The request is not urgent but it is blocking my next step. Ref validation-infrastructure-fault-021."}
+{"label": "training_request", "text": "Could someone review this induction ticket and advise the correct path? Ref validation-training-request-012."}
+{"label": "change_management", "text": "The branch has raised release approval; please route this to the responsible support group. Ref validation-change-management-016."}
+{"label": "login_issue", "text": "Please help with password reset; our team cannot complete the routine public service task today. Ref validation-login-issue-010."}
+{"label": "data_privacy", "text": "I need guidance about consent question. The request is not urgent but it is blocking my next step. Ref validation-data-privacy-021."}
+{"label": "policy_question", "notes": "Mentions document access, but primary intent is asking which policy applies.", "text": "For tomorrow's work queue, can the service desk check records retention and tell us what is needed? Ref validation-policy-question-005. This may sound related to another queue, but the main need is records retention."}
+{"label": "identity_management", "text": "Kindly assist, I am new in the office and access group is confusing for me. Ref validation-identity-management-024."}
+{"label": "compliance_audit", "text": "We have a question on Essential 8 after a staff member followed the usual process and got stuck. Ref validation-compliance-audit-023."}
+{"label": "change_management", "notes": "Mentions infrastructure, but primary intent is CAB approval.", "text": "We have a question on maintenance window after a staff member followed the usual process and got stuck. Ref validation-change-management-003. This may sound related to another queue, but the main need is maintenance window."}
+{"label": "change_management", "text": "There is an issue involving maintenance window. It affects a low-risk administrative workflow. Ref validation-change-management-018."}
+{"label": "policy_question", "notes": "Mentions document access, but primary intent is asking which policy applies.", "text": "Please help with records retention; our team cannot complete the routine public service task today. Ref validation-policy-question-000. This may sound related to another queue, but the main need is records retention."}
+{"label": "infrastructure_fault", "text": "Please help with VPN outage; our team cannot complete the routine public service task today. Ref validation-infrastructure-fault-000."}
+{"label": "compliance_audit", "text": "Could someone review this control attestation ticket and advise the correct path? Ref validation-compliance-audit-002."}
+{"label": "training_request", "text": "There is an issue involving security awareness. It affects a low-risk administrative workflow. Ref validation-training-request-018."}
+{"label": "identity_management", "text": "I need guidance about service account. The request is not urgent but it is blocking my next step. Ref validation-identity-management-011."}
+{"label": "training_request", "text": "The branch has raised records course; please route this to the responsible support group. Ref validation-training-request-006."}
+{"label": "incident_report", "text": "I need guidance about lost access card. The request is not urgent but it is blocking my next step. Ref validation-incident-report-021."}
+{"label": "policy_question", "text": "I may not explain perfect English, but need help for travel approval so our form can move forward. Ref validation-policy-question-017."}
+{"label": "identity_management", "text": "There is an issue involving offboarding. It affects a low-risk administrative workflow. Ref validation-identity-management-008."}
+{"label": "compliance_audit", "text": "Kindly assist, I am new in the office and FISMA checklist is confusing for me. Ref validation-compliance-audit-014."}
+{"label": "infrastructure_fault", "text": "Could someone review this server degradation ticket and advise the correct path? Ref validation-infrastructure-fault-022."}
+{"label": "grievance_hr", "text": "Could someone review this HR dispute ticket and advise the correct path? Ref validation-grievance-hr-012."}
+{"label": "login_issue", "notes": "Mentions MFA and identity, but the user is blocked at login.", "text": "Could someone review this single sign-on ticket and advise the correct path? Ref validation-login-issue-002. This may sound related to another queue, but the main need is single sign-on."}
+{"label": "document_access", "text": "Could someone review this policy library ticket and advise the correct path? Ref validation-document-access-012."}
