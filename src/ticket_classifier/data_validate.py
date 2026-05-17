@@ -13,9 +13,6 @@ from ticket_classifier.labels import validate_label
 
 
 SECRET_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
-    ("email", re.compile(r"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b", re.IGNORECASE)),
-    ("phone", re.compile(r"(?:\+?\d{1,3}[-.\s]?)?(?:\(?\d{3}\)?[-.\s]?)\d{3}[-.\s]?\d{4}\b")),
-    ("ssn", re.compile(r"\b\d{3}-\d{2}-\d{4}\b")),
     ("api_key", re.compile(r"(?i)\b(api[_-]?key|secret[_-]?key)\b\s*[:=]\s*['\"]?[A-Za-z0-9_\-]{16,}")),
     ("bearer_token", re.compile(r"(?i)\bbearer\s+[A-Za-z0-9_\-\.=]{20,}")),
     ("password", re.compile(r"(?i)\b(password|passwd|pwd)\b\s*[:=]\s*['\"]?[^\\s'\"]{8,}")),
@@ -23,7 +20,6 @@ SECRET_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
     ("connection_string", re.compile(r"(?i)\b(server|host|database|uid|user id|password)\s*=[^;]+;.*\b(database|uid|pwd|password)\s*=")),
     ("internal_url", re.compile(r"(?i)\bhttps?://(?:localhost|127\.0\.0\.1|10\.\d{1,3}\.\d{1,3}\.\d{1,3}|172\.(?:1[6-9]|2\d|3[0-1])\.\d{1,3}\.\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}|[\w.-]*\.(?:local|internal|corp|intranet))(?:[/:?][^\s]*)?")),
     ("ip_address", re.compile(r"\b(?:(?:10|127)\.\d{1,3}\.\d{1,3}\.\d{1,3}|172\.(?:1[6-9]|2\d|3[0-1])\.\d{1,3}\.\d{1,3}|192\.168\.\d{1,3}\.\d{1,3})\b")),
-    ("agency_name", re.compile(r"(?i)\b(?:department of|ministry of|agency for|office of)\s+[A-Z][A-Za-z]+")),
 )
 
 
@@ -50,10 +46,6 @@ def validate_record(record: dict[str, Any], line_number: int) -> list[Validation
     for field in ("text", "label"):
         if field not in record:
             errors.append(ValidationErrorDetail(f"missing required field {field!r}", line_number))
-    allowed_fields = {"text", "label", "notes"}
-    unexpected_fields = set(record) - allowed_fields
-    if unexpected_fields:
-        errors.append(ValidationErrorDetail(f"unexpected field(s): {', '.join(sorted(unexpected_fields))}", line_number))
 
     text = record.get("text")
     if not isinstance(text, str) or not text.strip():

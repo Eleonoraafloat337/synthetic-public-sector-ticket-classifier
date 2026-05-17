@@ -3,14 +3,20 @@
 from __future__ import annotations
 
 import argparse
+import json
+from pathlib import Path
 
 import numpy as np
-from datasets import load_dataset
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from transformers import AutoModelForSequenceClassification, AutoTokenizer, pipeline
 
 from ticket_classifier.data_validate import validate_file
 from ticket_classifier.labels import LABELS
+
+
+def read_jsonl(path: str) -> list[dict[str, str]]:
+    """Read JSONL records without using the Hugging Face datasets cache."""
+    return [json.loads(line) for line in Path(path).read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -27,12 +33,12 @@ def main(argv: list[str] | None = None) -> int:
         details = "\n".join(f"- {error.format()}" for error in errors[:20])
         raise ValueError(f"Dataset validation failed for {args.test}:\n{details}")
 
-    dataset = load_dataset("json", data_files={"test": args.test})["test"]
+    dataset = read_jsonl(args.test)
     tokenizer = AutoTokenizer.from_pretrained(args.model_dir)
     model = AutoModelForSequenceClassification.from_pretrained(args.model_dir)
     classifier = pipeline("text-classification", model=model, tokenizer=tokenizer, top_k=None, truncation=True)
 
-    true_labels = list(dataset["label"])
+    true_labels = [row["label"] for row in dataset]
     predicted_labels: list[str] = []
     for row in dataset:
         scores = classifier(row["text"])[0]

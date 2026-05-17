@@ -9,12 +9,6 @@ LABELS: tuple[str, ...] = (
     "training_request",
     "data_privacy",
     "document_access",
-    "procurement_request",
-    "compliance_audit",
-    "identity_management",
-    "infrastructure_fault",
-    "grievance_hr",
-    "change_management",
 )
 
 LABEL_TO_ID: dict[str, int] = {label: index for index, label in enumerate(LABELS)}

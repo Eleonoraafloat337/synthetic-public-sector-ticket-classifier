@@ -1,75 +1,103 @@
-# Public Sector Ticket Classifier
+# synthetic-public-sector-ticket-classifier
 
-Production-ready FastAPI and training scaffold for routing synthetic government helpdesk tickets across 12 labels. The model path, thresholds, and secrets are environment driven so the same image can run locally or in Azure Container Apps.
+Safe, synthetic public-sector helpdesk ticket classification with Hugging Face Transformers.
+
+All examples in this repository are synthetic. Do not add real client data, employee data, credentials, internal URLs, access tokens, logs, IP addresses, or regulated information.
+
+## Model Access
+
+The Hugging Face model repository is:
+
+[nprasann/synthetic-public-sector-ticket-classifier](https://huggingface.co/nprasann/synthetic-public-sector-ticket-classifier)
+
+## Labels
+
+- `policy_question`
+- `login_issue`
+- `incident_report`
+- `training_request`
+- `data_privacy`
+- `document_access`
 
 ## Quickstart
 
 ```bash
-python -m venv .venv
+python3.11 -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements-dev.txt
-python tools/generate_dataset.py
-PYTHONPATH=src python -m ticket_classifier.data_validate data/train.jsonl
-PYTHONPATH=src uvicorn inference.app:app --app-dir src --host 0.0.0.0 --port 8080
+pip install -e ".[dev]"
 ```
 
-Train locally when GPU resources are available:
+Validate the synthetic data:
 
 ```bash
-PYTHONPATH=src python -m ticket_classifier.train \
-  --train data/train.jsonl \
-  --validation data/validation.jsonl \
-  --test data/test.jsonl \
-  --output-dir output/model
+python -m ticket_classifier.data_validate data/train.jsonl
+python -m ticket_classifier.data_validate data/validation.jsonl
+python -m ticket_classifier.data_validate data/test.jsonl
 ```
 
-## Environment Variables
+Train the compact repository model into `./model`:
 
-| Variable | Purpose | Default |
-|---|---|---|
-| `MODEL_DIR` | Directory containing model artifacts and `label_map.json` | `output/model` |
-| `MODEL_VERSION` | Version returned by inference responses | `1.2.0` |
-| `BASE_MODEL` | Hugging Face base model for training | `microsoft/deberta-v3-small` |
-| `CONFIDENCE_THRESHOLD` | Below this score, return `uncertain` | `0.5` |
-| `LOW_CONFIDENCE_THRESHOLD` | Metrics threshold for low-confidence rate | `0.6` |
-| `DRIFT_WINDOW` | Number of recent predictions used for drift checks | `1000` |
-| `DRIFT_THRESHOLD` | Jensen-Shannon warning threshold | `0.1` |
-| `HUGGINGFACE_TOKEN` | Optional Hub token, sourced from Key Vault in Azure | unset |
-| `MLFLOW_TRACKING_URI` | MLflow tracking backend | local or workflow-provided |
-
-## Architecture
-
-```text
-Azure Container Apps <-> FastAPI inference service
-        |
-Azure Machine Learning <-> MLflow training and registry
-        |
-Azure Container Registry <-> Docker image
-        |
-Azure Monitor / App Insights <-> JSON logs and Prometheus metrics
-        |
-Azure Key Vault <-> HF token and runtime secrets
+```bash
+python -m model.train --output-dir model
 ```
 
-## Production Checklist
+Run local inference:
 
-- [ ] Data validation passes for all JSONL splits.
-- [ ] `python -m ticket_classifier.train` produces `output/model/label_map.json`.
-- [ ] Macro F1 is at least 0.80 and no label F1 is below 0.65.
-- [ ] `python -m ticket_classifier.run_exam --model-dir output/model --output output/eval/scorecard.json` completes.
-- [ ] `ruff`, `mypy --strict`, and `pytest --cov=src --cov-fail-under=85` pass.
-- [ ] Docker image runs as non-root and responds at `/health` within 30 seconds.
-- [ ] Container App references Key Vault for secrets.
-- [ ] No raw ticket text appears in application logs.
-- [ ] Blue/green deployment health check passes before traffic promotion.
+```bash
+python -m model.inference \
+  --model-dir model \
+  --text "I cannot access the policy document library."
+```
+
+Run tests:
+
+```bash
+pytest
+```
+
+## Load From Hugging Face
+
+```python
+from transformers import AutoModel, AutoTokenizer
+
+hf_model = "nprasann/synthetic-public-sector-ticket-classifier"
+model = AutoModel.from_pretrained(hf_model)
+tokenizer = AutoTokenizer.from_pretrained(hf_model)
+```
+
+For classification:
+
+```python
+from transformers import pipeline
+
+classifier = pipeline(
+    "text-classification",
+    model="nprasann/synthetic-public-sector-ticket-classifier",
+    tokenizer="nprasann/synthetic-public-sector-ticket-classifier",
+)
+
+print(classifier("I cannot access the policy document library."))
+```
+
+## Repository Layout
+
+- `data/`: synthetic JSONL train, validation, and test splits.
+- `model/`: compact Hugging Face model artifacts plus training and inference entry points.
+- `src/ticket_classifier/`: original CLI package for data validation, training, evaluation, prediction, publishing, and model-card generation.
+- `tests/`: pytest coverage for validation, labels, and model-card generation.
+- `docs/`: educational notes and safety guidance.
 
 ## Publishing
 
-Hugging Face publication is guarded. The command refuses to publish unless `--confirm-publish` is present:
+Publishing is deliberately opt-in. The publishing command refuses to upload unless `--confirm-publish` is provided.
 
 ```bash
-PYTHONPATH=src python -m ticket_classifier.publish_to_hub \
-  --model-dir output/model \
+python -m ticket_classifier.publish_to_hub \
+  --model-dir model \
   --repo-id nprasann/synthetic-public-sector-ticket-classifier \
   --confirm-publish
 ```
+
+## License
+
+MIT
